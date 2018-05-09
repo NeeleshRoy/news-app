@@ -1,4 +1,4 @@
-# [sorting-js](https://github.com/NeeleshRoy/news-app)
+# [News App](https://github.com/NeeleshRoy/news-app)
 
 [![npm version](https://badge.fury.io/js/sorting-javascript.svg?style=flat-square)](https://badge.fury.io/js/sorting-javascript)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://lbesson.mit-license.org/)
