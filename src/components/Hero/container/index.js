@@ -52,6 +52,14 @@ export default class Hero extends Component {
   handleMouseLeave() {
     console.log('mouseleave')
   }
+
+  _getBackground(url) {
+    const styles = {
+      background: 'url(' + url + ') 0 0 no-repeat',
+      backgroundSize: 'cover'
+    }
+    return styles
+  }
   
   render() {
     return (
@@ -60,6 +68,7 @@ export default class Hero extends Component {
         this.state.articles.map((article, i) => {
           return(
             <Card 
+            style = { this._getBackground(article.urlToImage) }
             key = { i }
             title = { article.title }
             image = { article.urlToImage }
