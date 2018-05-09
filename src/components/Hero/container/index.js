@@ -23,6 +23,7 @@ export default class Hero extends Component {
       return response.json()
     })
     .then((data) => {
+      that.setState({ location: data.city + ', ' +  data.country })
       that._getNewsByLocation(data.country)
     })
   }
@@ -46,31 +47,43 @@ export default class Hero extends Component {
   }
   
   handleMouseEnter() {
-    console.log('mouseenter')
+    
   }
   
   handleMouseLeave() {
     console.log('mouseleave')
   }
+
+  _getBackground(url) {
+    const styles = {
+      background: 'url(' + url + ') 0 0 no-repeat',
+      backgroundSize: 'cover'
+    }
+    return styles
+  }
   
   render() {
     return (
-      <div className = "row">
-      {
-        this.state.articles.map((article, i) => {
-          return(
-            <Card 
-            key = { i }
-            title = { article.title }
-            image = { article.urlToImage }
-            description = { article.description }
-            source = { article.source.name }
-            handleMouseEnter = { this.handleMouseEnter } 
-            handleMouseLeave = { this.handleMouseLeave }
-            />
-          )
-        })
-      }
+      <div>
+        <h1>News - { this.state.location }</h1>
+        <div className = "row">
+        {
+          this.state.articles.map((article, i) => {
+            return(
+              <Card 
+              style = { this._getBackground(article.urlToImage) }
+              key = { i }
+              title = { article.title }
+              image = { article.urlToImage }
+              link = { article.url }
+              source = { article.source.name }
+              handleMouseEnter = { this.handleMouseEnter } 
+              handleMouseLeave = { this.handleMouseLeave }
+              />
+            )
+          })
+        }
+        </div>
       </div>
     )
   }

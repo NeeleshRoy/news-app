@@ -1,0 +1,29 @@
+.card {
+  float: left;
+  width: 210px;
+  padding: 10px;
+  height: 320px;
+  overflow: hidden;
+  margin: 20px 20px;
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+
+.row {
+  display: inline-block;
+}
+
+.card__text-wrapper {
+  background: #fff;
+  padding: 12px 10px;
+  margin: 200px -10px 0px -10px;
+  height: 90px;
+  opacity: 0.9;
+}
+
+.card:hover { 
+  transform: scale(1.1); 
+}
