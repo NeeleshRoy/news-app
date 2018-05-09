@@ -55,7 +55,7 @@ export default class Hero extends Component {
   
   render() {
     return (
-      <div className = "container">
+      <div className = "row">
       {
         this.state.articles.map((article, i) => {
           return(

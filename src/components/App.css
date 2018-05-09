@@ -99,3 +99,18 @@ hr {
 input, select {
     vertical-align:middle;
 }
+
+img {
+    width: 100%;
+}
+
+.container-fluid,
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
